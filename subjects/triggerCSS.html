@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Shelby Burnworth | CIT 261 | CSS Trigger with JavaScript</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type="text/css">
+      #boxOne {
+        background: green;
+        width: 400px;
+        height: 400px;
+      }
+</style>
+    <script type="text/javascript">
+    function changeColor(element, color) {
+        var elementobj = document.getElementById(element);
+        elementobj.style.transition = "background 1s ease-out 0s";
+        elementobj.style.background = color;
+    }
+    function fadeOut(element) {
+      var elementobj = document.getElementById(element);
+      elementobj.style.transition = "opacity 2s linear 0s";
+      elementobj.style.opacity = 0;
+    }
+
+    </script>
+</head>
+
+<body>
+    <header>
+    </header>
+    <main>
+          <div id="boxOne"></div>       
+          <button onclick="changeColor('boxOne', 'blue');">Make it blue!</button>  
+          <button onclick="changeColor('boxOne', 'pink');">Make it pink!</button> 
+          <button onclick="fadeOut('boxOne');">Goodbye!</button>  
+
+    </main>
+    <footer>
+    </footer>
+    </div>
+</body>
+
+</html>

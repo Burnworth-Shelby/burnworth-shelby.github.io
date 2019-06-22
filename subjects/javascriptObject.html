@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Shelby Burnworth | CIT 261 | JavaScript Objects</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../main.css" type="text/css" rel="stylesheet">
+    <script type="text/javascript">
+        function Family(husband, wife, boy) {
+            this.husband = husband;
+            this.wife = wife;
+            this.boy = boy;
+            this.wholeFamily = function () { return "Please meet " + this.husband + ", " + this.wife + ", and " + this.boy + "."};
+        }
+
+        function newFamily() {
+            let husband = document.getElementById("husband").value;
+            let wife = document.getElementById("wife").value;
+            let boy = document.getElementById("boy").value;
+            person1 = new Family(husband, wife, boy);
+        }
+
+        function displayFamily() {
+            newFamily();
+            document.getElementById("newDisplay").innerHTML = person1.wholeFamily();
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+    </header>
+    <main>
+        <h1>Javascript Objects</h1>
+        <img src="../images/Family.jpg" alt="My Family" width=600px;>
+        <h3>Create A Family</h3>
+        <p>Create your own family by inserting names below:</p>
+        <br>
+        Husband's Name: <input type="text" id="husband">
+        <br>
+        Wife's Name: <input type="text" id="wife">
+        <br>
+        Boy's Name: <input type="text" id="boy">
+        <br>
+        <button type="button" onclick="displayFamily()">Create my family</button>
+        <p id="newDisplay"></p>
+    </main>
+    <footer>
+    </footer>
+    </div>
+</body>
+
+</html>

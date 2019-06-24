@@ -1,0 +1,42 @@
+[
+  {
+    "name": "La Perla",
+    "types" : "Mexican",
+    "foods": {
+      "likes": ["California Burrito"],
+      "dislikes": ["beans"]
+    }
+  },
+  {
+    "name": "Phils BBQ",
+    "Type" : "BBQ",
+    "foods": {
+      "likes": ["Ribs", "Mac Salad"],
+      "dislikes": ["Onion Rings"]
+    }
+  },
+  {
+    "name": "Surfside Deli",
+    "types" : "Specialty Sandwich",
+    "foods": {
+      "likes": ["Tri-tip Sandwich"],
+      "dislikes": ["Avocado Toast"]
+    }
+  },
+   {
+    "name": "Taco Stand",
+    "types" : "Mexican",
+    "foods": {
+      "likes": ["Al Pastor Taco", "Churros"],
+      "dislikes": ["Elote"]
+    }
+  },
+   {
+    "name": "Con Pane Rustic Bread",
+    "types" : "Bakery",
+    "foods": {
+      "likes": ["Cinnamon Rolls"],
+      "dislikes": ["Cheese"]
+    }
+  }
+]

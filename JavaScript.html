@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Shelby Burnworth | CIT 261 | JavaScript</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../main.css" type="text/css" rel="stylesheet">
+    <style type="text/css">
+    </style>
+</head>
+
+<body>
+    <header>
+    </header>
+    <main>
+        <h1>Javascript Functions, Arrays and Loops</h1>
+        <h3>Few of my favorite things: Arrays</h3>
+        These are a few of my favorite things..<br><br>
+        <input type="text" id="fav1">
+        <input type="text" id="fav2">
+        <input type="text" id="fav3"><br><br>
+        <button type="button" onclick="favArray()">Show me an array of my favorite things!</button>
+        <p id="displayArray"></p>
+
+        <button onclick="retrieve()">Show My Last List</button>
+        <p id="favoriteDisplay"></p>
+
+        <h3>The song that never ends loop</h3>
+        Have you ever heard the song that never ends? <br><br>
+        <button type="button" onclick="song()">Show me!</button>
+        <p id="neverEnds"></p>
+
+        <script type="text/javascript">
+          var favoriteList = {};   
+           function Favorites(fav1, fav2, fav3){
+               this.fav1 = fav1;
+               this.fav2 = fav2;
+               this.fav3 = fav3;
+           }
+           function favArray() {
+               let fav1 = document.getElementById("fav1").value;
+               let fav2 = document.getElementById("fav2").value;
+               let fav3 = document.getElementById("fav3").value;
+               let favArray = [fav1, fav2, fav3];
+               favoriteList = new Favorites(fav1, fav2, fav3);  
+               document.getElementById("displayArray").innerHTML = favArray;
+           }
+            
+           function displayGroceryList() {
+               createnewlist();
+               document.getElementById("favoriteDisplay").innerHTML = favArray;
+              
+               localStorage.setItem("newFavoriteList", JSON.stringify(favArray));
+           }
+
+            function retrieve() {
+                var retrievedList = localStorage.getItem("newFavoriteList");
+                var list = JSON.parse(retrievedList);
+                document.getElementById("favoriteDisplay").innerHTML = list.favArray;
+            }
+            
+
+            function song() {
+                var text = "";
+                var i = 0;
+                while (i < 20) {
+                    text += "<br>This is the song that never ends "
+                    i++;
+                }
+                document.getElementById("neverEnds").innerHTML = text;
+            }
+        </script>
+    </main>
+    <footer>
+    </footer>
+    </div>
+</body>
+
+</html>

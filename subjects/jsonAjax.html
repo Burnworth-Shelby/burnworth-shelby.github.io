@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Shelby Burnworth | CIT 261 | JSON and Local Storage
+
+    </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../main.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+    </header>
+    <main>
+        <h1>JSON and AJAX</h1>
+        <h3>Press the button to see my top 20 restaurants in San Diego (increments of 5)</h3>
+        <button id="btn">Get Info</button>
+        <div id="restaurant-info"></div>
+
+        <script type="text/javascript">
+            var pageCounter = 1;
+            var animalContainer = document.getElementById("restaurant-info")
+            var btn = document.getElementById("btn");
+
+            btn.addEventListener("click", function () {
+                var ourRequest = new XMLHttpRequest();
+                ourRequest.open('GET', 'https://burnworth-shelby.github.io/json-example/food-' + pageCounter + '.json')
+                ourRequest.onload = function () {
+                    var ourData = JSON.parse(ourRequest.responseText);
+                    renderHTML(ourData);
+                };
+                ourRequest.send();
+                pageCounter++;
+            })
+
+            function renderHTML(data) {
+                var htmlString = "";
+
+                for (i =0; i < data.length; i++){
+                    htmlString += "<p>" + data[i].name + " is a " + data[i].types + " restaurant and I recommend the ";
+                    
+                    for(ii = 0; ii < data[i].foods.likes.length; ii++) {
+                        if(ii == 0){
+                            htmlString += data[i].foods.likes[ii];
+                        } else {
+                            htmlString += " and " + data[i].foods.likes[ii];
+                        }
+                    }
+                    htmlString += '.</p>';
+                }
+
+                animalContainer.insertAdjacentHTML('beforeend', htmlString);
+            }
+
+        </script>
+    </main>
+    <footer>
+    </footer>
+    </div>
+</body>
+
+</html>

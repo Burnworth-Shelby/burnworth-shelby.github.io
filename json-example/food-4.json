@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Pacific Beach Fish Shop",
+    "types" : "Seafood",
+    "foods": {
+      "likes": ["Shrimp", "Swordfish"],
+      "dislikes": ["Oysters"]
+    }
+  },
+  {
+    "name": "Donut Bar",
+    "types" : "Specialty Donut",
+    "foods": {
+      "likes": ["Strawberry Split"],
+      "dislikes": ["Mexican Hot Chocolate"]
+    }
+  },
+  {
+    "name": "Leilani's",
+    "types" : "Hawaiian",
+    "foods": {
+      "likes": ["Kalua Pork"],
+      "dislikes": ["Spam"]
+    }
+  },
+   {
+    "name": "Seaside",
+    "types" : "Cafe",
+    "foods": {
+      "likes": ["Chocolate Acai Bowl"],
+      "dislikes": ["Green juice"]
+    }
+  },
+   {
+    "name": "Enoteca Andriano",
+    "types" : "Italian",
+    "foods": {
+      "likes": ["Burrata"],
+      "dislikes": ["Carbonara"]
+    }
+  }
+]

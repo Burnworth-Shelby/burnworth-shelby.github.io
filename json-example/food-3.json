@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Extraordinary Desserts",
+    "types" : "Dessert",
+    "foods": {
+      "likes": ["Chocolate Cake"],
+      "dislikes": ["coffee cake"]
+    }
+  },
+  {
+    "name": "Handel's",
+    "types" : "Specialty Ice Cream",
+    "foods": {
+      "likes": ["Chocolate Raspberry"],
+      "dislikes": ["Vanilla Orea"]
+    }
+  },
+  {
+    "name": "Kono's Cafe",
+    "types" : "Breakfast",
+    "foods": {
+      "likes": ["French Toast", "Bacon"],
+      "dislikes": ["Breakfast Burrito"]
+    }
+  },
+   {
+    "name": "Snooze",
+    "types" : "Breakfast",
+    "foods": {
+      "likes": ["Eggs Benedict"],
+      "dislikes": ["Breakfast pot pie"]
+    }
+  },
+   {
+    "name": "Rocky's",
+    "types" : "Sports Pub",
+    "foods": {
+      "likes": ["Cheeseburger", "Fries"],
+      "dislikes": ["The restaurant. Get it to go."]
+    }
+  }
+]

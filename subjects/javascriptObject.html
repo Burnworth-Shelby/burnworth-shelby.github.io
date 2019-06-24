@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Shelby Burnworth | CIT 261 | JavaScript Objects</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../main.css" type="text/css" rel="stylesheet">
+    <style>
+            #content {
+                width: 500px;
+                max-height: 0px;
+                overflow: hidden;
+                transition: max-height .5s;
+            }
+    
+            #content.open {
+                max-height: 1000px;
+                transition: max-height 1s;
+            }
+    
+            #expand {
+                background: lightgreen;
+                display: block;
+                width: 150px;
+                padding: 10px;
+                text-align: center;
+
+            }
+        </style>
+</head>
+
+<body>
+    <header>
+    </header>
+    <main>
+        <h1>Javascript Objects</h1>
+        <img id="family" src="../images/Family.jpg" alt="My Family" width=600px;>
+        <h3 id="heading">Create A Family</h3>
+        <p>Create your own family by inserting names below:</p>
+        <br>
+        Husband's Name: <input type="text" id="husband">
+        <br>
+        Wife's Name: <input type="text" id="wife">
+        <br>
+        Boy's Name: <input type="text" id="boy">
+        <br>
+        <button type="button" onclick="displayFamily()">Create my family</button>
+        <p id="newDisplay"></p>
+
+        <p>Click the button to meet the real family behind this picture.</p>
+
+        <button onclick="family()">Meet The Family</button>
+
+        <div id="content">
+                <p>Jimmy grew up in a small town Central Pennsylvania. After graduating high school,
+                    he did a year of school at Brigham Young University - Idaho. After his first year
+                    he served a mission for The Church of Jesus Christ of Latter Day Saints in Riverside, California.
+                    When he completed his mission, he moved to Salt Lake Utah where he attended and graduated from the
+                    University
+                    of Utah with a Bachelors in Finance. He fell in love with California during his church mission
+                    and moved to San Diego, California shortly after graduation.
+                </p>
+                <p>Shelby grew up just outside of Salt Lake City in Sandy, Utah. When she completed high school
+                    she attended Utah State University and was pursuing a degree in special education. While she was
+                    attending school, an opportunity came for her to move to San Diego, California for a year to be a
+                    nanny for a family friend. She had a strong impression that this is where she needed to go
+                    so she continued her schooling online at Salt Lake Community College while she lived in San Diego.
+                    Shortly after moving to San Diego, she met Jimmy. They dated for a year and half before getting married
+                    in the San Diego Temple. Shelby continued to nanny while she continued with her education at Brigham
+                    Young
+                    University-Idaho in Web Design.
+                </p>
+                <p>James just turned two years old. He is a very busy, active boy. He loves the moveies Cars, Toy Story and
+                    really enjoys watching episodes of Mickey Mouse Clubhouse. His favorite activity is swimming and he is
+                    starting
+                    to swim unassisted. He loves to sit on the edge of the pool and jump in. He is excited about being
+                    promoted to big
+                    brother in the next year.
+                </p>
+            </div>
+            <a id="expand">Show More</a>
+       
+    
+        <script type="text/javascript">
+        var person1 = {}
+            function Family(husband, wife, boy) {
+                this.husband = husband;
+                this.wife = wife;
+                this.boy = boy;
+                this.wholeFamily = function () { return "Please meet " + this.husband + ", " + this.wife + ", and " + this.boy + "." };
+            }
+
+            function newFamily() {
+                let husband = document.getElementById("husband").value;
+                let wife = document.getElementById("wife").value;
+                let boy = document.getElementById("boy").value;
+                person1 = new Family(husband, wife, boy);
+            }
+
+            function displayFamily() {
+                newFamily();
+                document.getElementById("newDisplay").innerHTML = person1.wholeFamily();
+            }
+
+            function changeElements() {
+                var heading = document.getElementById("heading");
+                element.innerHTML = "Create Another Family";
+            }
+
+            function family() {
+                var para = document.createElement("P");
+                para.innerText = "This is Jimmy, Shelby and their son James Burnworth";
+                document.body.appendChild(para);
+                document.getElementById("family").src = "../images/Family2.jpg";
+            }
+
+            function setUpEvents() {
+                var content = document.getElementById("content");
+                var button = document.getElementById("expand");
+
+                button.onclick = function () {
+                    if (content.className == "open") {
+                        content.className = "";
+                        button.innerHTML = "Show More";
+                    } else {
+                        content.className = "open";
+                        button.innerHTML = "Show Less";
+                    }
+                };
+            }
+            window.onload = function () {
+                setUpEvents();
+            };
+
+
+        </script>
+    </main>
+    <footer>
+    </footer>
+    </div>
+</body>
+
+</html>

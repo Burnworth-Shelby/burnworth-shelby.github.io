@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Crack Shack",
+    "types" : "Chicken Sandwich",
+    "foods": {
+      "likes": ["Breakfast Sandiwch"],
+      "dislikes": ["fries"]
+    }
+  },
+  {
+    "name": "Tumeric",
+    "types" : "Thai",
+    "foods": {
+      "likes": ["Mango Sticky Rice"],
+      "dislikes": ["Green Curry"]
+    }
+  },
+  {
+    "name": "Baked Bear",
+    "types" : "Specialty Ice Cream",
+    "foods": {
+      "likes": ["Cookie Ice Cream Sandwich"],
+      "dislikes": ["donut ice cream sandwich"]
+    }
+  },
+   {
+    "name": "Iron Pig",
+    "types" : "BBQ",
+    "foods": {
+      "likes": ["Man Salad", "Brisket Sandwich"],
+      "dislikes": ["smashed potatoes"]
+    }
+  },
+   {
+    "name": "Rubicon Deli",
+    "types" : "Specialty Sandwich",
+    "foods": {
+      "likes": ["Dutch Crunch Bread"],
+      "dislikes": ["Pesto bread"]
+    }
+  }
+]

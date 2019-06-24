@@ -9,7 +9,7 @@
   },
   {
     "name": "Phils BBQ",
-    "Type" : "BBQ",
+    "types" : "BBQ",
     "foods": {
       "likes": ["Ribs", "Mac Salad"],
       "dislikes": ["Onion Rings"]

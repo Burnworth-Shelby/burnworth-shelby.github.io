@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Shelby Burnworth | CIT 261 | JavaScript</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../main.css" type="text/css" rel="stylesheet">
+    <style type="text/css">
+        #name,
+        #song,
+        #place,
+        #color {
+            padding: 20px;
+            margin: 10px;
+            width: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+    </header>
+    <main>
+        <h1>Local Storage</h1>
+        <h3>Lets get to know about you and save your information in local storage</h3>
+        <br>
+        <input type="text" id="name" placeholder="What is your name?">
+        <br>
+        <input type="text" id="song" placeholder="What is your favorite song?">
+        <br>
+        <input type="text" id="place" placeholder="Where is your favorite place to visit?">
+        <br>
+        <input type="text" id="color" placeholder="What is your favorite color?">
+        <br>
+        <br>
+        <button type="button" onclick="displayInfo()">Save to Local Storage</button>
+        <p id="display"></p>
+        <br>
+        <p>Refresh your page and click the button below to see your previous input</p>
+        <button type="button" onclick="previousList()">See Previous Answers</button>
+        <p id="previousDisplay"></p>
+    </main>
+    <script>
+        var personList = {};
+
+        function Info(name, song, place, color) {
+            this.name = name;
+            this.song = song;
+            this.place = place;
+            this.color = color;
+        }
+
+        function createNewList() {
+            let name = document.getElementById("name").value;
+            let song = document.getElementById("song").value;
+            let place = document.getElementById("place").value;
+            let color = document.getElementById("color").value;
+            personList = new Info(name, song, place, color);
+        }
+
+       
+        function displayInfo() {
+            createNewList();
+            document.getElementById("display").innerHTML = "Your name is " + personList.name + ". You like the song " + personList.song + " and love to visit " + personList.place + ". Your favorite color is " + personList.color + ".";
+            localStorage.setItem("newpersonList", JSON.stringify(personList));
+        }
+
+        function previousList() {
+            var retrievedlist = localStorage.getItem("newpersonList");
+            var list = JSON.parse(retrievedlist);
+            document.getElementById("previousDisplay").innerHTML = "Your previous answers were " + list.name + ", " + list.song + ", " + list.place + ", and " + list.color + ".";
+        }
+
+    </script>
+    <footer>
+    </footer>
+    </div>
+</body>
+
+</html>

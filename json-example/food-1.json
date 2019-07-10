@@ -1,22 +1,42 @@
 [
-  {
-    "activity": "Kayaking",
-    "where" : "La Jolla"
-  },
-  {
-    "activity": "Riding a bike",
-    "where" : "Coronado"
-  },
-  {
-    "activity": "Hiking Torrey Pines",
-    "where" : "La Jolla"
-  },
-   {
-    "activity": "Tidepools",
-    "where" : "Point Loma"
-  },
-   {
-    "activity": "Catch a movie",
-    "where" : "Coronado"
-  }
-]
+	  {
+	    "name": "La Perla",
+	    "types" : "Mexican",
+	    "foods": {
+	      "likes": ["California Burrito"],
+	      "dislikes": ["beans"]
+	    }
+	  },
+	  {
+	    "name": "Phils BBQ",
+	    "types" : "BBQ",
+	    "foods": {
+	      "likes": ["Ribs", "Mac Salad"],
+	      "dislikes": ["Onion Rings"]
+	    }
+	  },
+	  {
+	    "name": "Surfside Deli",
+	    "types" : "Specialty Sandwich",
+	    "foods": {
+	      "likes": ["Tri-tip Sandwich"],
+	      "dislikes": ["Avocado Toast"]
+	    }
+	  },
+	   {
+	    "name": "Taco Stand",
+	    "types" : "Mexican",
+	    "foods": {
+	      "likes": ["Al Pastor Taco", "Churros"],
+	      "dislikes": ["Elote"]
+	    }
+	  },
+	   {
+	    "name": "Con Pane Rustic Bread",
+	    "types" : "Bakery",
+	    "foods": {
+	      "likes": ["Cinnamon Rolls"],
+	      "dislikes": ["Cheese"]
+	    }
+	  }
+	]

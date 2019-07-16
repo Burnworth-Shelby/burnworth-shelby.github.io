@@ -1,310 +1,175 @@
-@import url('https://fonts.googleapis.com/css?family=Dekko');
-
 body {
-    font-family: 'Helvetica', sans-serif;
+    background-color: #f9edcd;
+}
+h1 {
+    font-size: 3.7em;
+    text-align: center;
+    margin-bottom: 0px;
 }
 
-h3 {
-    color: purple;
+p {
+    font-family: Arial, sans-serif;
+}
+header p {
+    animation-duration: 2s;
+    animation-name: slidein;
+}
+a {
+    font-family: Arial, sans-serif;
 }
 
-/*****Pacman Animation******/
+input {
+    margin: 2px;
+    padding: 10px;
+    width: 350px;
+    background: white;
+}
 
-/*Pacman*/
-.pacman {
-    position: absolute;
-    z-index: 99;
-    top: 50;
-    animation: moveForward 9s linear infinite;
-    animation-delay: .5s;
-  }
-  
-  .pacman::before, .pacman::after {
-    content: "";
+header p {
+    text-align: center;
+    font-size: .95em;
+}
+
+button {
+    background: #ab410d;
+    color: white;
     display: block;
-    height: 0;
-    width: 0;
+    width: 250px;
+    padding: 10px;
+    text-align: center;
+    font-size: 1em;
+    border-radius: 6px;
+    animation: shake 2s;
+}
+
+.btnSave:hover {
+  box-shadow: 0 3px #ffb347;
+  transform: translateY(4px);
+}
+
+#priorities {
+    background-color: white;
+    padding: 10px;
+    margin: 10px;
+    border: 6px solid #4b9fc9;
+    width: 35%;
+    position: relative;
+    float: right;
+    margin-top: -1px;
+}
+
+.btnPrevious {
+    transition: all .5s;
+}
+
+.btnPrevious:hover {
+    transform: scaleX(1.1);
+  }
+
+#restaurants {
+    background-color: white;
+    padding: 10px;
+    margin: 10px;
+    border: 6px solid #4b9fc9;
+    width: 60%;
+}
+
+#placeToSee{
+    background-color: white;
+    padding: 10px;
+    margin: 10px;
+    border: 6px solid #4b9fc9;
+    width: 60%;
+}
+.btnHiddenGem {
+    transition: all 1s;
+  }
+  
+  .btnHiddenGem span {
+    display: inline-block;
+    position: relative;
+    transition: 1s;
+  }
+  
+  .btnHiddenGem span:after {
+    content: '>>';
     position: absolute;
-    border: solid 100px yellow;
-    border-radius: 50%;
-    border-right-color: transparent;
-    border-bottom-color: transparent;
-    animation: mouthTop 0.7s ease infinite;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 1s;
   }
   
-  .pacman::after {
-    border-color: yellow;
-    border-right-color: transparent;
-    border-top-color: transparent;
-    animation: mouthBottom 0.7s ease infinite;
-  }
-
-.path {
-    position: absolute; 
-    width: 100%;
-    height: 100px;
-    border-top: 30px dotted green;
-    margin-top: 90px;
-}
-
-/****** CSS Transitions, Animations and Transformations ******/
-
-.container {
-  height: 25vmin;
-  width: 25vmin;
-  background-color: teal;
-}
-
-.cssProperties {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.container-one {
-  padding: 1vmin;
-}
-
-.orbiting-circle {
-  height: 25%;
-  width: 25%;
-  background-color: darkred;
-  border-radius: 50%;
-  animation: orbit 3s linear infinite;
-}
-
-.container-two {
-display: flex;
-justify-content: center;
-align-items: center;
-}
-
-.morphing-circle {
-  height: 25%;
-  width: 25%;
-  background-color:darkred;	
-  border-radius: 50%;
-  transition: border-radius .5s ease, 
-              background-color .5s ease, 
-              transform .5s ease .5s;
-animation: morphing-circle-square 3s linear infinite; 
-}
-.container-two:hover .morphing-circle {
-  border-radius: 0;
-  background-color:  white;
-  transform: rotate(90deg);
-}
-
-.container-three {
-display: flex;
-justify-content: center;
-align-items: center;
-}
-
-.rectleft {	
-  height: 25%;
-  width: 12.5%;
-  background-color: darkred;
-  border-radius: 50px 0px 0px 50px;
-  animation: rectleft 3s linear infinite;
-
-}
-
-.rectright {	
-  height: 25%;
-  width: 12.5%;
-  background-color: darkred;
-  border-radius: 0px 50px 50px 0px;
-  animation: rectright 3s linear infinite;
-
-}
-
-/****** Hokey Pokey *****/
-.dance {
-  padding: 20px 0px;
-  max-width: 20%;
-  margin: auto;
-  text-align: center;
-}
-.rightin {
-height: 100px;
-width: 100px;
-margin: 30px;
-padding: 10px;
-background: orange;
-color: white;
-text-align: center;
-transition: 1s;
-}
-
-.rightin:hover {
-  transform: skew(20deg,20deg);
-}
-
-.rightout {
-  height: 100px;
-  width: 100px;
-  margin: 30px;
-  padding: 10px;
-  background: orange;
-  color: white;
-  text-align: center;
-  transition: 1s;
-}
-
-.rightout:hover {
-  transform: translate3d(-20px, -20px, -5px);
-}
-.leftin {
-  height: 100px;
-  width: 100px;
-  margin: 30px;
-  padding: 10px;
-  background: orange;
-  color: white;
-  text-align: center;
-  transition: 1s;
-}
-
-.leftin:hover {
-  transform: skew(-20deg, -20deg);
-}
-.shake {
-  height: 100px;
-  width: 100px;
-  margin: 30px;
-  padding: 10px;
-  background: orange;
-  color: white;
-  text-align: center;
-  transition-delay: .2s;
-}
-
-.shake:hover {
-  animation: shake 0.5s;
-  transform: skew(-10deg, -10deg);
-}
-
-.hokey {
-  height: 100px;
-  width: 100px;
-  margin: 30px;
-  padding: 10px;
-  background: orange;
-  color: white;
-  text-align: center;
-  transition: 1s;
-}
-
-.hokey:hover {
-  transform: rotate(360deg);
-}
-
-.about {
-  height: 100px;
-  width: 100px;
-  margin: 30px;
-  padding: 10px;
-  background: orange;
-  color: white;
-  text-align: center;
-  transition: 1s;
-}
-
-.about:hover {
-  transform: scale(2);
-}
-
-/****** Magic Trick ******/
-.square {
-  width: 250px;
-  height: 250px;
-  margin: 20px;
-  display: inline-block;
-  background: purple;
-  transition: opacity 2.5s; 
-}
-
-#magic {
-  background-color: blue;
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-}
-
-
-/****** Pacman KeyFrames ******/
-  @keyframes mouthTop {
-    50% {
-      transform: rotate(44deg);
-    }
-  }
-  @keyframes mouthBottom {
-    50% {
-      transform: rotate(-44deg);
-    }
-  }
-  @keyframes moveForward {
-    0% {
-      left: -15%;
-    }
-    100% {
-      left: 100%;
-    }
-  }
-
-/****** CSS Properties Keyframes ******/
-  @keyframes orbit {
-    0% { transform: translate(0,0); }
-    5% { transform: translate(0,0); } 
-    25% { transform: translate(300%,0%); } 
-    30% { transform: translate(300%,0%); } 
-    50% { transform: translate(300%,300%); } 
-    55% { transform: translate(300%,300%); }
-    75% { transform: translate(0%,300%); }
-    80% { transform: translate(0%,300%); }
-    100% { transform: translate(0%,0%); }
+  .btnHiddenGem:hover span {
+    padding-right: 25px;
   }
   
-  @keyframes morphing-circle-square {
-    0% {border-radius: 50%}
-    25% {
-        border-radius: 50%;
-        background-color: darkred;
-    }
-    50% { 
-        border-radius: 0%;
-        background-color: white;
-        transform: rotate(0deg);
-    }
-    75% { 
-        border-radius: 0%;
-        background-color: white;
-        transform: rotate(90deg);   
-    }
-    100% { 
-        border-radius: 50%;
-        background-color: darkred;
-        transform: rotate(90deg);
-    }
-  }
-  
-  @keyframes rectright {
-  100% {transform: translate(50%,0%);}
-  30% {transform: translate(50%,0%);}
-  20% {transform: translate(0%,0%);}
-    }
-  @keyframes rectleft {
-  100% {transform: translate(-50%,0%);}
-  30% {transform: translate(-50%,0%);}
-  20% {transform: translate(0%,0%);}
+  .btnHiddenGem:hover span:after {
+    opacity: 1;
+    right: 0;
   }
 
-  /****** Hokey Pokey Keyframes ******/
+.btnRestaurants {
+    transition: .4s;
+}
+.btnRestaurants:hover {
+    transform: rotate(360deg);
+  }
+
+/*javaScript Events "History"*/
+#history {
+    background-color: white;
+    width: 95%;
+    margin: 0 auto;
+    position:relative;
+    padding: 10px;
+    max-height: 100px;
+    overflow: hidden;
+    transition: max-height 1s;
+    border: 6px solid #4b9fc9;
+}
+
+#history.open {
+    max-height: 1000px;
+    transition: max-height 3s;
+}
+
+#expand {
+    background: #ab410d;
+    color: white;
+    display: block;
+    width: 150px;
+    padding: 10px;
+    text-align: center;
+    margin: 20px auto;
+    animation: shake 2s;
+}
+
+img {
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+    width: 900px;
+    transition: width 1s;
+}
+
+img:hover {
+    width: 1220px;
+
+}
+
+@keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 300%; 
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
+
   @keyframes shake {
     0% { transform: translate(1px, 1px) rotate(0deg); }
     10% { transform: translate(-1px, -2px) rotate(-1deg); }
@@ -317,35 +182,4 @@ transition: 1s;
     80% { transform: translate(-1px, -1px) rotate(1deg); }
     90% { transform: translate(1px, 2px) rotate(0deg); }
     100% { transform: translate(1px, -2px) rotate(-1deg); }
-  }
-
-  /****** Weather Keyframes ******/
-  @keyframes rainOne {
-    0% {
-      bottom: 260px;
-    }
-    100% {
-      bottom: 200px;
-      opacity: 0;
-    }
-  }
-  
-  @keyframes rainTwo {
-    0% {
-      bottom: 290px;
-    }
-    100% {
-      bottom: 200px;
-      opacity: 0;
-    }
-  }
-  
-  @keyframes rainThree {
-    0% {
-      bottom: 280px;
-    }
-    100% {
-      bottom: 200px;
-      opacity: 0;
-    }
   }

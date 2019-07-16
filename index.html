@@ -1,38 +1,222 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Shelby Burnworth | CIT 261</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="main.css" type="text/css" rel="stylesheet">
-    </head>
-    <body>
-        <header> 
-        </header>
-        <main>
-        <h1>Shelby Burnworth | CIT 261 </h1>
-        <h3>In Progress</h3>
-                <li><a href="subjects/localStorage.html">Local Storage</a></li>
-                <li><a href="subjects/javascriptObject.html">DOM</a></li>
-                <li><a href="subjects/javascriptObject.html">JavaScript Events</a></li>
-                <li><a href="subjects/jsonAjax.html">AJAX</a></li>
-                <li><a href="subjects/jsonAjax.html">JSON</a></li>
-                <li><a href="subjects/html5.html">HTML 5 tags for media</a></li>
-        <h3>Basic</h3>
-            <li><a href="subjects/cssAnimations.html">CSS Animation</a></li>
-            <li><a href="subjects/cssTransition.html">CSS3 Transition</a></li>
-            <li><a href="subjects/triggerCSS.html">CSS3 Trigger with JavaScript</a></li>
-            <li><a href="subjects/cssProperties.html">CSS3 Transitions, animations and transformations</a></li>
-            
-        <h3>Working</h3>
-        <h3>Skilled</h3>
-            <li><a href="subjects/JavaScript.html">JavaScript</a></li>
-            <li><a href="subjects/javascriptObject.html">JavaScript Objects</a></li>
-            <li><a href="subjects/cssTransform.html">CSS3 Transform</a></li>
-        
-        </main>
-        <footer>
-        </footer>
+
+<head>
+    <title>Shelby Burnworth | CIT Final Project</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="main.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>A San Diego Vacation</h1>
+        <p id="subhead">Look through the resources below to plan your perfect San Diego Vacation</p>
+    </header>
+    <main>
+        <div id="history">
+            <h2> The History of San Diego</h2>
+            <p>The first European to visit the region was a Spaniard named Juan Rodriguez Cabrillo.
+                In 1542 Cabrillo led an expedition that sailed along the coast of California. So on 27
+                June 1542 Cabrillo set sail from La Navidad in Mexico. On 28 September 1542 Cabrillo anchored
+                in San Diego Bay. However the story of San Diego began in 1769 when the Spanish built a chain
+                of missions across California. Then in 1821 Mexico became independent of Spain. However in 1846
+                the USA annexed California.
+            </p>
+            <p>In 1850 although San Diego only had a population of several hundred it was incorporated. San Diego
+                slowly developed. Colorado House was built in 1851. Old Point Loma Lighthouse was built in 1855.
+                Whaley House was built in 1856. It was the first two story brick house in California. San Diego
+                grew rapidly in the 1860s. In 1860 San Diego was still a tiny place with a population of only 731.
+                By 1870 it had grown to a town of 2,300. Meanwhile Balboa Park opened in 1868. Old City Hall in
+                San Diego was built in 1874. Then in the 1880s San Diego boomed. Meanwhile in the late 19th century
+                a number of famous buildings were built in San Diego. Llewelyn building was erected in 1887. Also in
+                1887 Villa Montezuma was built. Yuma Building was constructed in 1888. Louis Bank of Commerce was also
+                built in 1888.
+            </p>
+            <p>In the early 20th century San Diego became a major US naval base. However on 21 July 1905 a boiler
+                explosion on board the USS Bennington while it was at San Diego killed 66 men and injured many others.
+                Nevertheless because of the navy San Diego suffered less in the depression of the 1930s than most of
+                the USA. Meanwhile in 1915 San Diego held the Panama-California Exposition. In 1936 the
+                California-Pacific
+                International Exposition was held there. In the early 20th century the population of San Diego boomed.
+                In 1900 the population of San Diego was less than 18,000. By 1940 it had risen to 203,000. In the second
+                half of the 20th century San Diego continued to flourish. Its population rose to 696,000 in 1970.
+                Meanwhile
+                the Maritime Museum was founded in 1948 and a new Public Library was built in San Diego in 1954. Sea
+                World
+                opened in 1964. The Timken Museum of Art opened in 1965. The San Diego-Coronado Bay Bridge opened in
+                1969.
+                San Diego continued to prosper in the late 20th century. Plaza Bonita opened in 1983. Horton Plaza
+                opened in 1984. San Diego Convention Center was built in 1989.
+            </p>
+            <p>In the 21st century San Diego continued to thrive. Its main industries are defense and tourism. In 2017
+                the population of San Diego was 1.4 million. San Diego is the second largest city in California.</p>
         </div>
-    </body>
+        <a id="expand">Show More</a>
+        <div id="priorities">
+            <h2>List the top 5 things you want to do in San Diego.</h2>
+            <br>
+            <input type="text" id="item1">
+            <br>
+            <input type="text" id="item2">
+            <br>
+            <input type="text" id="item3">
+            <br>
+            <input type="text" id="item4">
+            <br>
+            <input type="text" id="item5">
+            <br>
+            <button class="btnSave" onclick="displayInfo()">Save My Priorities</button>
+            <p id="display"></p>
+            <br>
+            <p>If you lost your list, click below to restore your previous priorities.</p>
+            <button class="btnPrevious" type="button" onclick="previousList()">See Previous Priorities</button>
+            <p id="previousDisplay"></p>
+            <hr>
+            <h2>Is there a restaurant you want to try that isn't recommended?</h2>
+            Name: <input type="text" id="name">
+            <br>
+            Type of Food: <input type="text" id="type">
+            <br>
+            What others have recommended: <input type="text" id="other">
+            <br>
+            <button class="btnSave" onclick="displayRecommendation()">Save</button>
+            <p id="newDisplay"></p>
+        </div>
+        <div id="restaurants">
+                <h2>Click below to see the top 20 places to eat in San Diego (increments of 5)</h2>
+                <button class="btnRestaurants"id="btn">Top Restaurants</button>
+                <div id="restaurant-info"></div>
+            </div>
+        <div id="placeToSee">
+                <h2>San Diego Hidden Gems</h2>
+                <img id="hiddenGem" src="images/sanDiego.jpg" alt="My Family">
+                <p id="monteCarlo">There is so much to see and do in San Diego. The most popular places are the famous San
+                    Diego Zoo,
+                    Balboa Park, SeaWorld, and of course the miles of sandy beaches with great surf. However, there
+                    are also many hidden gems. Click below to see my top hidden gem recommendation!</p>
+                    <button class="btnHiddenGem" onclick="sdHiddenGem()"><span>Show Me </span></button>
+            </div>
+
+    </main>
+    <footer>
+        <script>
+            //Local Storage Priority List
+            var priorityList = {};
+
+            function Info(item1, item2, item3, item4, item5) {
+                this.item1 = item1;
+                this.item2 = item2;
+                this.item3 = item3;
+                this.item4 = item4;
+                this.item5 = item5;
+            }
+
+            function createNewList() {
+                let item1 = document.getElementById("item1").value;
+                let item2 = document.getElementById("item2").value;
+                let item3 = document.getElementById("item3").value;
+                let item4 = document.getElementById("item4").value;
+                let item5 = document.getElementById("item5").value;
+                priorityList = new Info(item1, item2, item3, item4, item5);
+            }
+
+
+            function displayInfo() {
+                createNewList();
+                document.getElementById("display").innerHTML = "Your priorities are...<br>" + priorityList.item1 + "<br>" + priorityList.item2 + "<br>" + priorityList.item3 + "<br>" + priorityList.item4 + "<br>" + priorityList.item5;
+                localStorage.setItem("newpriorityList", JSON.stringify(priorityList));
+            }
+
+            function previousList() {
+                var retrievedlist = localStorage.getItem("newpriorityList");
+                var list = JSON.parse(retrievedlist);
+                document.getElementById("previousDisplay").innerHTML = "Your previous priorities were " + list.item1 + ", " + list.item2 + ", " + list.item3 + ", " + list.item4 + ", and " + list.item5 + ".";
+            }
+
+            //JSON and AJAX 
+            var pageCounter = 1;
+            var foodContainer = document.getElementById("restaurant-info")
+            var btn = document.getElementById("btn");
+
+            btn.addEventListener("click", function () {
+                var ourRequest = new XMLHttpRequest();
+                ourRequest.open('GET', 'https://burnworth-shelby.github.io/json-example/food-' + pageCounter + '.json')
+                ourRequest.onload = function () {
+                    var ourData = JSON.parse(ourRequest.responseText);
+                    renderHTML(ourData);
+                };
+                ourRequest.send();
+                pageCounter++;
+            })
+
+            function renderHTML(data) {
+                var htmlString = "";
+
+                for (i = 0; i < data.length; i++) {
+                    htmlString += "<p>" + data[i].name + " is a " + data[i].types + " restaurant and I recommend the ";
+
+                    for (ii = 0; ii < data[i].foods.likes.length; ii++) {
+                        if (ii == 0) {
+                            htmlString += data[i].foods.likes[ii];
+                        } else {
+                            htmlString += " and " + data[i].foods.likes[ii];
+                        }
+                    }
+                    htmlString += '.</p>';
+                }
+
+                foodContainer.insertAdjacentHTML('beforeend', htmlString);
+            }
+            //JavaScript objects
+            var person1 = {}
+            function Recommendation(name, type, other) {
+                this.name = name;
+                this.type = type;
+                this.other = other;
+                this.wholeRecommendation = function () { return "Now add " + this.name + ", a  " + this.type + " restaurant, to your priority list above and remember to try the " + this.other + "." };
+            }
+
+            function newRecommendation() {
+                let name = document.getElementById("name").value;
+                let type = document.getElementById("type").value;
+                let other = document.getElementById("other").value;
+                person1 = new Recommendation(name, type, other);
+            }
+
+            function displayRecommendation() {
+                newRecommendation();
+                document.getElementById("newDisplay").innerHTML = person1.wholeRecommendation();
+            }
+
+            function sdHiddenGem() {
+                document.getElementById("monteCarlo").innerHTML = "The SS Monte Carlo was a gambling and prositution ship operating in international waters off the coast of Coronado, California. In 1937, the anchor of the ship lost its hold in a storm which caused the ship to drift onto the beach in Coronado Shores. Because the vessal was considered illegal once it hit shore, no one claimed ownership. Over the years sand has buried the wreckage, however it can still be seen at low tide. It is speculated that their may be $150,000 worth of silver dollar coins remaining on the ship.";
+                document.getElementById("hiddenGem").src = "images/SSMonteCarlo.jpg";
+            }
+            //JavaScript Events
+            function setUpEvents() {
+                var history = document.getElementById("history");
+                var button = document.getElementById("expand");
+
+                button.onclick = function () {
+                    if (history.className == "open") {
+                        history.className = "";
+                        button.innerHTML = "Show More";
+                    } else {
+                        history.className = "open";
+                        button.innerHTML = "Show Less";
+                    }
+                };
+            }
+            window.onload = function () {
+                setUpEvents();
+            };
+
+
+
+        </script>
+    </footer>
+    </div>
+</body>
+
 </html>
